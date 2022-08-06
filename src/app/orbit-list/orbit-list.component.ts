@@ -8,6 +8,8 @@ import { Satellite } from '../satellite';
 })
 
 export class OrbitListComponent implements OnInit {
+	boxColor: boolean = true;
+	// warning: string = ".isSpaceDebris()";
 
   @Input() satellites: Satellite[];
   constructor() { }
@@ -26,5 +28,14 @@ export class OrbitListComponent implements OnInit {
 			return 0;
 		});
 	}
+
+	changeColor(): boolean {
+		for (let i=0; i<this.satellites.length; i++) {
+			if (this.satellites[i].isSpaceDebris() === true) {
+				return this.boxColor = true;
+			}
+		}
+	}
+
 
 }
