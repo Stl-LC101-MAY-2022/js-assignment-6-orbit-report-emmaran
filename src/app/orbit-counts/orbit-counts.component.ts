@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { count } from 'console';
+// import { count } from 'console';
 import { Satellite } from '../satellite';
 
 @Component({
